@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.21263482280431434" prefHeight="750.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PositionsController">
+   <items>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="748.0" prefWidth="598.0">
+         <children>
+            <Label alignment="CENTER" layoutX="61.0" layoutY="14.0" prefHeight="88.0" prefWidth="175.0" text="Voting System" textAlignment="CENTER" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Button layoutX="-2.0" layoutY="236.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="294.0" text="Positions" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="-2.0">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+            <Button layoutX="-2.0" layoutY="294.0" mnemonicParsing="false" onAction="#switchToCandidates" prefHeight="58.0" prefWidth="294.0" text="Candidates" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="-2.0">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+            <Button layoutX="-2.0" layoutY="352.0" mnemonicParsing="false" onAction="#switchToVoters" prefHeight="58.0" prefWidth="294.0" text="Voters" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="-2.0">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+            <Label alignment="TOP_LEFT" layoutX="13.0" layoutY="109.0" prefHeight="35.0" prefWidth="302.0" text="Yara Mahfouz" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="-2.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Label alignment="TOP_LEFT" layoutX="15.0" layoutY="138.0" prefHeight="35.0" prefWidth="302.0" text="Online" textFill="#06ab19" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="-1.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Button layoutX="-2.0" layoutY="447.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="294.0" text="Settings" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="-2.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Label alignment="TOP_LEFT" layoutX="6.0" layoutY="215.0" prefHeight="26.0" prefWidth="276.0" text="Manage" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="-1.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" layoutX="6.0" layoutY="422.0" prefHeight="26.0" prefWidth="276.0" text="Settings" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="-1.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+         </children>
+      </AnchorPane>
+      <VBox>
+         <children>
+            <TableView fx:id="positionsTable" prefHeight="736.0" prefWidth="1018.0">
+               <columns>
+                  <TableColumn fx:id="idColumn" minWidth="30.0" prefWidth="113.0" text="ID" />
+                  <TableColumn fx:id="positionNameColumn" minWidth="30.0" prefWidth="140.0" text="Position Name" />
+                  <TableColumn fx:id="maxVotesColumn" prefWidth="123.0" text="Max Votes" />
+               </columns>
+            </TableView>
+            <VBox>
+               <children>
+                  <HBox prefHeight="90.0" prefWidth="1018.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="132.0" text="Add Position: ">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" top="15.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="positionNameField" prefHeight="31.0" prefWidth="123.0" promptText="Position Name">
+                           <HBox.margin>
+                              <Insets top="15.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField fx:id="maxVotesField" prefHeight="31.0" prefWidth="128.0" promptText="Max  Votes">
+                           <HBox.margin>
+                              <Insets left="10.0" right="20.0" top="15.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button fx:id="addPosition" mnemonicParsing="false" onAction="#addPosition" prefHeight="31.0" prefWidth="90.0" text="Add">
+                           <HBox.margin>
+                              <Insets right="100.0" top="15.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Label prefHeight="30.0" prefWidth="145.0" text="Delete Position:">
+                           <HBox.margin>
+                              <Insets top="15.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="idField" prefHeight="31.0" prefWidth="92.0" promptText="ID">
+                           <HBox.margin>
+                              <Insets left="10.0" top="15.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button fx:id="deletePosition" mnemonicParsing="false" onAction="#deletePosition" prefHeight="31.0" prefWidth="97.0" text="Delete">
+                           <HBox.margin>
+                              <Insets left="20.0" top="15.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="79.0" prefWidth="1018.0">
+                     <children>
+                        <Label fx:id="nameError" prefHeight="31.0" prefWidth="132.0" textFill="#dd1515">
+                           <HBox.margin>
+                              <Insets left="150.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="numberError" prefHeight="31.0" prefWidth="195.0" textFill="#dd1515">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="idError" prefHeight="31.0" prefWidth="222.0" textFill="#dd1212">
+                           <HBox.margin>
+                              <Insets left="290.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </items>
+</SplitPane>

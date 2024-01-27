@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.21263482280431434" prefHeight="750.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CandidatesController">
+    <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="748.0" prefWidth="598.0">
+            <children>
+                <Label alignment="CENTER" layoutX="61.0" layoutY="14.0" prefHeight="88.0" prefWidth="175.0" text="Voting System" textAlignment="CENTER" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0">
+                    <font>
+                        <Font size="28.0" />
+                    </font>
+                </Label>
+                <Button layoutX="-2.0" layoutY="236.0" mnemonicParsing="false" onAction="#switchToPositions" prefHeight="58.0" prefWidth="294.0" text="Positions" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="-2.0">
+                    <font>
+                        <Font size="16.0" />
+                    </font></Button>
+                <Button layoutX="-2.0" layoutY="294.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="294.0" text="Candidates" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="-2.0">
+                    <font>
+                        <Font size="16.0" />
+                    </font></Button>
+                <Button layoutX="-2.0" layoutY="352.0" mnemonicParsing="false" onAction="#switchToVoters" prefHeight="58.0" prefWidth="294.0" text="Voters" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="-2.0">
+                    <font>
+                        <Font size="16.0" />
+                    </font></Button>
+                <Label alignment="TOP_LEFT" layoutX="13.0" layoutY="109.0" prefHeight="35.0" prefWidth="302.0" text="Yara Mahfouz" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="-2.0">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </Label>
+                <Label alignment="TOP_LEFT" layoutX="15.0" layoutY="138.0" prefHeight="35.0" prefWidth="302.0" text="Online" textFill="#06ab19" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="-1.0">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </Label>
+                <Button layoutX="-2.0" layoutY="447.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="294.0" text="Settings" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="-2.0">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Label alignment="TOP_LEFT" layoutX="6.0" layoutY="215.0" prefHeight="26.0" prefWidth="276.0" text="Manage" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="-1.0">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label alignment="TOP_LEFT" layoutX="6.0" layoutY="422.0" prefHeight="26.0" prefWidth="276.0" text="Settings" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="-1.0">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </Label>
+            </children>
+        </AnchorPane>
+        <VBox>
+            <children>
+                <TableView fx:id="candidatesTable" mouseTransparent="true" prefHeight="610.0" prefWidth="1018.0">
+                    <columns>
+                        <TableColumn fx:id="idColumn" minWidth="30.0" prefWidth="100.0" text="ID" />
+                        <TableColumn fx:id="firstNameColumn" minWidth="30.0" prefWidth="120.0" text="First Name" />
+                        <TableColumn fx:id="lastNameColumn" prefWidth="120.0" text="Last Name" />
+                  <TableColumn fx:id="positionColumn" prefWidth="120.0" text="Position" />
+                  <TableColumn fx:id="numberOfVotesColumn" prefWidth="150.0" text="Number of votes" />
+                    </columns>
+                </TableView>
+                <VBox prefHeight="117.0" prefWidth="1018.0">
+                    <children>
+                        <HBox prefHeight="55.0" prefWidth="1018.0">
+                            <children>
+                                <Label prefHeight="30.0" prefWidth="146.0" text="Add Candidate:">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="20.0" top="15.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <TextField fx:id="firstNameField" prefHeight="31.0" prefWidth="150.0" promptText="First Name">
+                                    <HBox.margin>
+                                        <Insets left="5.0" top="15.0" />
+                                    </HBox.margin>
+                                </TextField>
+                        <Label fx:id="firstNameError" prefHeight="21.0" prefWidth="160.0" textFill="#e10909">
+                           <HBox.margin>
+                              <Insets left="20.0" top="20.0" />
+                           </HBox.margin>
+                        </Label>
+                                <Label prefHeight="30.0" prefWidth="164.0" text="Delete Candidate:">
+                                    <HBox.margin>
+                                        <Insets left="80.0" right="10.0" top="15.0" />
+                                    </HBox.margin>
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="idField" prefHeight="31.0" prefWidth="92.0" promptText="ID">
+                                    <HBox.margin>
+                                        <Insets left="10.0" top="15.0" />
+                                    </HBox.margin>
+                                </TextField>
+                        <Button mnemonicParsing="false" onAction="#deleteCandidate" prefHeight="31.0" prefWidth="97.0" text="Delete">
+                           <HBox.margin>
+                              <Insets left="10.0" top="15.0" />
+                           </HBox.margin>
+                        </Button>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="95.0" prefWidth="1018.0">
+                     <children>
+                                <TextField fx:id="LastNameField" prefHeight="31.0" prefWidth="151.0" promptText="Last Name">
+                                    <HBox.margin>
+                                        <Insets left="171.0" right="20.0" top="15.0" />
+                                    </HBox.margin>
+                                </TextField>
+                        <Label fx:id="lastNameError" prefHeight="21.0" prefWidth="151.0" textFill="#e10909">
+                           <HBox.margin>
+                              <Insets top="20.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="idError" prefHeight="21.0" prefWidth="151.0" textFill="#e10909">
+                           <HBox.margin>
+                              <Insets left="273.0" top="20.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            <HBox prefHeight="55.0" prefWidth="1018.0">
+               <children>
+                  <TextField fx:id="PositionField" editable="false" mouseTransparent="true" prefHeight="30.0" prefWidth="150.0" promptText="Position">
+                     <HBox.margin>
+                        <Insets left="171.0" right="10.0" top="15.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <MenuButton fx:id="PositionsMenu" mnemonicParsing="false" prefHeight="31.0" prefWidth="102.0" text="Positions">
+                     <HBox.margin>
+                        <Insets top="15.0" />
+                     </HBox.margin>
+                  </MenuButton>
+                  <Label fx:id="positionsError" prefHeight="21.0" prefWidth="160.0" textFill="#e10909">
+                     <HBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="26.0" prefWidth="1018.0">
+               <children>
+                          <Button mnemonicParsing="false" onAction="#addCandidate" prefHeight="31.0" prefWidth="90.0" text="Add">
+                              <HBox.margin>
+                                  <Insets bottom="15.0" left="200.0" right="100.0" top="15.0" />
+                              </HBox.margin>
+                          </Button>
+               </children>
+            </HBox>
+            </children>
+        </VBox>
+    </items>
+</SplitPane>

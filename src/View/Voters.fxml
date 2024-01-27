@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.21263482280431434" prefHeight="750.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.VotersController">
+   <items>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="748.0" prefWidth="598.0">
+         <children>
+            <Label alignment="CENTER" layoutX="61.0" layoutY="14.0" prefHeight="88.0" prefWidth="175.0" text="Voting System" textAlignment="CENTER" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Button layoutX="-2.0" layoutY="236.0" mnemonicParsing="false" onAction="#switchToPositions" prefHeight="58.0" prefWidth="294.0" text="Positions" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="-2.0">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+            <Button layoutX="-2.0" layoutY="294.0" mnemonicParsing="false" onAction="#switchToCandidates" prefHeight="58.0" prefWidth="294.0" text="Candidates" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="-2.0">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+            <Button layoutX="-2.0" layoutY="352.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="294.0" text="Voters" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="-2.0">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+            <Label alignment="TOP_LEFT" layoutX="13.0" layoutY="109.0" prefHeight="35.0" prefWidth="302.0" text="Yara Mahfouz" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="-2.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Label alignment="TOP_LEFT" layoutX="15.0" layoutY="138.0" prefHeight="35.0" prefWidth="302.0" text="Online" textFill="#06ab19" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="-1.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Button layoutX="-2.0" layoutY="447.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="294.0" text="Settings" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="-2.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Label alignment="TOP_LEFT" layoutX="6.0" layoutY="215.0" prefHeight="26.0" prefWidth="276.0" text="Manage" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="-1.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" layoutX="6.0" layoutY="422.0" prefHeight="26.0" prefWidth="276.0" text="Settings" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="-1.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+         </children>
+      </AnchorPane>
+      <VBox>
+         <children>
+            <TableView fx:id="votersTable" prefHeight="771.0" prefWidth="1018.0">
+              <columns>
+                <TableColumn fx:id="idColumn" minWidth="30.0" prefWidth="100.0" text="ID" />
+                <TableColumn fx:id="firstNameColumn" minWidth="30.0" prefWidth="120.0" text="First Name" />
+                  <TableColumn fx:id="lastNameColumn" prefWidth="120.0" text="Last Name" />
+                  <TableColumn fx:id="emailColumn" prefWidth="180.0" text="Email" />
+                  <TableColumn fx:id="genderColumn" prefWidth="100.0" text="Gender" />
+                  <TableColumn fx:id="passwordColumn" minWidth="120.0" prefWidth="75.0" text="Password" />
+                  <TableColumn fx:id="phoneNumberColumn" minWidth="30.0" prefWidth="135.0" text="Phone Number" />
+                  <TableColumn fx:id="cityColumn" prefWidth="120.0" text="City" />
+                  <TableColumn fx:id="birthdayColumn" prefWidth="120.0" text="Birthday" />
+                  <TableColumn fx:id="voteStatusColumn" prefWidth="100.0" text="Vote Status" />
+              </columns>
+            </TableView>
+            <HBox prefHeight="149.0" prefWidth="1018.0">
+               <children>
+                  <Label fx:id="idError" prefHeight="28.0" prefWidth="207.0" textFill="#e40202">
+                     <HBox.margin>
+                        <Insets left="350.0" top="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label prefHeight="30.0" prefWidth="126.0" text="Delete Voter:">
+                     <HBox.margin>
+                        <Insets left="20.0" right="10.0" top="15.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="IDField" prefHeight="31.0" prefWidth="119.0" promptText="ID">
+                     <HBox.margin>
+                        <Insets left="10.0" top="15.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button mnemonicParsing="false" onAction="#deleteVoter" prefHeight="31.0" prefWidth="97.0" text="Delete">
+                     <HBox.margin>
+                        <Insets left="20.0" top="15.0" />
+                     </HBox.margin>
+                  </Button>
+               </children></HBox>
+         </children>
+      </VBox>
+   </items>
+</SplitPane>

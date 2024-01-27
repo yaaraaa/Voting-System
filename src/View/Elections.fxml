@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ElectionsController">
+   <children>
+      <Label fx:id="HelloLabel" layoutX="592.0" layoutY="210.0" prefHeight="93.0" prefWidth="111.0" text="Hello!">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label layoutX="370.0" layoutY="293.0" prefHeight="164.0" prefWidth="554.0" text="Elections will start on 30/7/2022">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label layoutX="445.0" layoutY="436.0" prefHeight="93.0" prefWidth="410.0" text="Your vote matters to us">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

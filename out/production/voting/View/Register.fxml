@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.RegisterController">
+   <children>
+      <Label alignment="CENTER" layoutX="-1.0" layoutY="23.0" prefHeight="88.0" prefWidth="175.0" text="Voting System" textAlignment="CENTER" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-1.0">
+         <font>
+            <Font size="42.0" />
+         </font>
+      </Label>
+      <TextField fx:id="firstName" layoutX="474.0" layoutY="186.0" prefHeight="38.0" prefWidth="352.0" promptText="First Name" />
+      <TextField fx:id="lastName" layoutX="474.0" layoutY="232.0" prefHeight="38.0" prefWidth="352.0" promptText="Last Name" />
+      <TextField fx:id="email" layoutX="474.0" layoutY="278.0" prefHeight="38.0" prefWidth="352.0" promptText="Email" />
+      <DatePicker fx:id="birthday" editable="false" layoutX="474.0" layoutY="565.0" prefHeight="38.0" prefWidth="352.0" promptText="Birthday" />
+      <TextField fx:id="password" layoutX="474.0" layoutY="375.0" prefHeight="38.0" prefWidth="352.0" promptText="Password" />
+      <MenuButton layoutX="760.0" layoutY="516.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="66.0" text="City">
+         <items>
+            <MenuItem mnemonicParsing="false" onAction="#cairoChoice" text="Cairo" />
+            <MenuItem mnemonicParsing="false" onAction="#gizaChoice" text="Giza" />
+            <MenuItem mnemonicParsing="false" onAction="#alexChoice" text="Alexandria" />
+         </items>
+      </MenuButton>
+      <TextField fx:id="city" editable="false" layoutX="474.0" layoutY="516.0" mouseTransparent="true" prefHeight="38.0" prefWidth="278.0" promptText="City" />
+      <TextField fx:id="passwordConfirmation" layoutX="474.0" layoutY="422.0" prefHeight="38.0" prefWidth="352.0" promptText="Password Confirmation" />
+      <TextField fx:id="phoneNumber" layoutX="474.0" layoutY="469.0" prefHeight="38.0" prefWidth="352.0" promptText="Phone Number" />
+      <Label layoutX="424.0" layoutY="111.0" prefHeight="88.0" prefWidth="314.0" text="Register" textAlignment="CENTER" AnchorPane.leftAnchor="475.0" AnchorPane.rightAnchor="-1.0">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="477.0" layoutY="680.0" prefHeight="27.0" prefWidth="234.0" text="Already have an account?">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Hyperlink layoutX="473.0" layoutY="700.0" onAction="#switchToLogin" prefHeight="34.0" prefWidth="75.0" text="Log in" textAlignment="CENTER">
+         <font>
+            <Font size="17.0" />
+         </font></Hyperlink>
+      <Button fx:id="registerBtn" layoutX="589.0" layoutY="623.0" mnemonicParsing="false" onAction="#register" prefHeight="38.0" prefWidth="123.0" text="Register">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="gender" editable="false" layoutX="474.0" layoutY="328.0" mouseTransparent="true" prefHeight="38.0" prefWidth="251.0" promptText="Gender" />
+      <MenuButton layoutX="734.0" layoutY="328.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="92.0" text="Gender">
+         <items>
+            <MenuItem mnemonicParsing="false" onAction="#maleChoice" text="Male" />
+            <MenuItem mnemonicParsing="false" onAction="#femaleChoice" text="Female" />
+         </items>
+      </MenuButton>
+      <Label fx:id="firstNameError" layoutX="309.0" layoutY="192.0" prefHeight="26.0" prefWidth="148.0" textFill="#e11c1c" />
+      <Label fx:id="lastNameError" layoutX="309.0" layoutY="238.0" prefHeight="26.0" prefWidth="148.0" textFill="#e11c1c" />
+      <Label fx:id="emailError" layoutX="361.0" layoutY="284.0" prefHeight="26.0" prefWidth="104.0" textFill="#e11c1c" />
+      <Label fx:id="genderError" layoutX="361.0" layoutY="334.0" prefHeight="26.0" prefWidth="104.0" textFill="#e11c1c" />
+      <Label fx:id="passwordError" layoutX="348.0" layoutY="381.0" prefHeight="26.0" prefWidth="117.0" textFill="#e11c1c" />
+      <Label fx:id="passwordMatchError" layoutX="301.0" layoutY="428.0" prefHeight="26.0" prefWidth="164.0" textFill="#e11c1c" />
+      <Label fx:id="phoneNumberError" layoutX="283.0" layoutY="475.0" prefHeight="26.0" prefWidth="182.0" textFill="#e11c1c" />
+      <Label fx:id="cityError" layoutX="373.0" layoutY="522.0" prefHeight="26.0" prefWidth="92.0" textFill="#e11c1c" />
+      <Label fx:id="birthdayError" layoutX="361.0" layoutY="571.0" prefHeight="26.0" prefWidth="104.0" textFill="#e11c1c" />
+      <Label fx:id="accountExistsError" layoutX="264.0" layoutY="284.0" prefHeight="26.0" prefWidth="201.0" textFill="#e40b0b" />
+   </children>
+   <padding>
+      <Insets top="20.0" />
+   </padding>
+</AnchorPane>
